@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamsi's Personal Webpage</title>
+</head>
+
+<body>
+
+    <h1>Narayanagari Vamsi</h1>
+
+    <p>
+        Hello! My name is Narayanagari Vamsi.
+        I am a Computer Science and Engineering student
+        who enjoys learning web development, programming,
+        and new technologies. I like creating websites,
+        solving coding problems, and exploring artificial
+        intelligence. My goal is to become a skilled
+        software developer.
+    </p>
+
+    <img src="vamsi.jpeg"
+         alt="Narayanagari Vamsi"
+         width="300"
+         height="350">
+
+    <h2>My Hobbies & Skills</h2>
+
+    <ul>
+        <li>Web Development</li>
+        <li>Java Programming</li>
+        <li>Python Programming</li>
+        <li>Reading Technology Articles</li>
+        <li>Playing Cricket</li>
+    </ul>
+
+    <h2>My Profiles</h2>
+
+    <p>
+        <a href="https://www.youtube.com/@vamsi529"
+           target="_blank">YouTube</a>
+    </p>
+
+    <h2>My YouTube Channel</h2>
+
+    <p>
+        <a href="https://www.youtube.com/@vamsi529"
+           target="_blank">
+            Visit My YouTube Channel
+        </a>
+    </p>
+
+    <h2>My GitHub Profile</h2>
+
+    <a href="https://github.com/Narayanagarivamsi"
+       target="_blank">
+        Visit My GitHub Profile
+    </a>
+
+    <!-- This webpage was created as part of an HTML assignment. -->
+
+</body>
+</html>
