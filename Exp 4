@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Advanced CSS3 Webpage</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ddd;
+}
+
+.container {
+    width: 95%;
+    margin: 10px auto;
+    border: 5px solid white;
+    box-shadow: 0 0 10px black;
+}
+
+/* Multiple Backgrounds */
+header {
+    height: 150px;
+    background-image:
+        url("flower.jpg"),
+        linear-gradient(to right, #1763b8, #58a8e8);
+    background-position: left top, center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 100px 100px, cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    height: 35px;
+    background: #999;
+}
+
+nav a {
+    width: 25%;
+    text-align: center;
+    padding: 9px;
+    text-decoration: none;
+    color: black;
+}
+
+nav a:first-child {
+    background: red;
+    color: white;
+}
+
+nav a:hover {
+    background: #333;
+    color: white;
+}
+
+/* Favourite Section */
+.favourites {
+    min-height: 140px;
+    background: pink;
+    padding: 5px;
+}
+
+.favbox {
+    width: 150px;
+    margin-left: 20%;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px #555;
+}
+
+.favtitle {
+    text-align: center;
+    padding: 8px;
+    background: green;
+    color: white;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}
+
+/* Odd and Even Rows */
+.item:nth-child(odd) {
+    background: #aaff00;
+}
+
+.item:nth-child(even) {
+    background: #008000;
+    color: white;
+}
+
+.item:hover {
+    background: orange;
+}
+
+.item img {
+    width: 25px;
+    height: 25px;
+    opacity: 0.3;
+}
+
+.item:hover img {
+    opacity: 1;
+}
+
+/* Login Area */
+.loginarea {
+    min-height: 265px;
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-image:
+        linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+        url("laptop.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+/* Rounded Corners and Shadows */
+.formbox {
+    width: 175px;
+    min-height: 160px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px black;
+}
+
+.formbox h3 {
+    text-align: center;
+    margin: 0 0 10px;
+}
+
+input {
+    width: 100%;
+    padding: 7px;
+    margin-bottom: 7px;
+    border: 1px solid #ccc;
+    background: #ddd;
+}
+
+/* Pseudo Classes */
+input:focus {
+    border: 3px solid red;
+    background: white;
+    outline: none;
+}
+
+input:required {
+    border-left: 3px solid blue;
+}
+
+input[type="email"]:invalid {
+    color: red;
+}
+
+input[type="email"]:valid {
+    color: blue;
+}
+
+button {
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    background: #0877ed;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #004a9f;
+}
+
+/* Footer */
+footer {
+    min-height: 75px;
+    padding: 10px;
+    background: #ffe0b2;
+    font-style: italic;
+}
+
+footer p {
+    margin: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav {
+        height: auto;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        width: 50%;
+    }
+
+    .loginarea {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .favbox {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header></header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Menu</a>
+    <a href="#">Others</a>
+</nav>
+
+<section class="favourites">
+
+    <div class="favbox">
+
+        <div class="favtitle">
+            Favourites
+        </div>
+
+        <div class="item">
+            Apple
+            <img src="apple.jpg" alt="Apple">
+        </div>
+
+        <div class="item">
+            Flower
+            <img src="flower.jpg" alt="Flower">
+        </div>
+
+        <div class="item">
+            Fruit
+            <img src="fruit.jpg" alt="Fruit">
+        </div>
+
+        <div class="item">
+            Orange
+            <img src="orange.jpg" alt="Orange">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="loginarea">
+
+    <div class="formbox">
+
+        <h3>Sign In</h3>
+
+        <input type="text"
+               placeholder="Username"
+               required>
+
+        <input type="password"
+               placeholder="Password"
+               required>
+
+        <button>Sign In</button>
+
+    </div>
+
+    <div class="formbox">
+
+        <h3>Sign Up</h3>
+
+        <input type="text"
+               placeholder="Name"
+               required>
+
+        <input type="email"
+               placeholder="Email"
+               required>
+
+        <input type="password"
+               placeholder="Password"
+               required>
+
+        <button>Sign Up</button>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>Your address</p>
+
+    <p>
+        © 2020-2021. (Register number) -
+        Web Technology Lab Batch 1.
+        All Rights Reserved.
+    </p>
+
+</footer>
+
+</div>
+
+</body>
+</html>
