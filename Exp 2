@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My HTML5 Showcase Page</title>
+</head>
+<body>
+
+<header>
+<h1>My HTML5 Showcase Page</h1>
+<p>
+This webpage demonstrates the major HTML5 elements and features.
+It includes headings, paragraphs, images, tables, forms, audio,
+video, hyperlinks, embedded webpages, and multimedia content.
+The purpose of this page is to showcase the capabilities of HTML5
+while following modern web standards.
+</p>
+</header>
+
+<hr>
+
+<nav>
+<a href="#about">About</a> |
+<a href="#table">Table</a> |
+<a href="#form">Form</a> |
+<a href="#media">Media</a>
+</nav>
+
+<hr>
+
+<section id="about">
+<h2>About HTML5</h2>
+
+<img src="https://www.w3schools.com/html/img_girl.jpg"
+alt="HTML5 Example Image" width="300">
+
+<p>
+HTML5 is the latest version of HyperText Markup Language.
+It introduces semantic elements, multimedia support, and improved
+form controls. HTML5 makes web development easier and more efficient.
+</p>
+
+<h3>Useful Website</h3>
+<a href="https://www.w3schools.com" target="_blank">
+Visit W3Schools
+</a>
+</section>
+
+<hr>
+
+<section id="table">
+<h2>HTML Elements Table</h2>
+
+<table border="1" cellpadding="8">
+<tr>
+<th>Element Name</th>
+<th>Category</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>&lt;header&gt;</td>
+<td>Semantic</td>
+<td>Defines the page header</td>
+</tr>
+
+<tr>
+<td>&lt;nav&gt;</td>
+<td>Semantic</td>
+<td>Contains navigation links</td>
+</tr>
+
+<tr>
+<td>&lt;footer&gt;</td>
+<td>Semantic</td>
+<td>Defines the page footer</td>
+</tr>
+</table>
+</section>
+
+<hr>
+
+<section id="form">
+<h2>Registration Form</h2>
+
+<form>
+<fieldset>
+<legend>Personal Information</legend>
+
+<label for="name">Name:</label>
+<input type="text" id="name" required>
+<br><br>
+
+<label for="email">Email:</label>
+<input type="email" id="email">
+<br><br>
+
+<label for="password">Password:</label>
+<input type="password" id="password">
+<br><br>
+
+<label for="phone">Phone:</label>
+<input type="tel" id="phone">
+<br><br>
+
+<label for="dob">Date of Birth:</label>
+<input type="date" id="dob">
+<br><br>
+
+Gender:
+<input type="radio" id="male" name="gender">
+<label for="male">Male</label>
+
+<input type="radio" id="female" name="gender">
+<label for="female">Female</label>
+<br><br>
+
+Skills:
+<input type="checkbox" id="html">
+<label for="html">HTML</label>
+
+<input type="checkbox" id="css">
+<label for="css">CSS</label>
+
+<input type="checkbox" id="js">
+<label for="js">JavaScript</label>
+<br><br>
+
+<label for="range">Experience:</label>
+<input type="range" id="range">
+<br><br>
+
+<label for="file">Upload Resume:</label>
+<input type="file" id="file">
+<br><br>
+
+<label for="course">Choose Course:</label>
+<select id="course">
+<option>HTML</option>
+<option>CSS</option>
+<option>JavaScript</option>
+</select>
+<br><br>
+
+<label>Course Progress:</label>
+<progress value="70" max="100"></progress>
+<br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</fieldset>
+</form>
+</section>
+
+<hr>
+
+<section id="media">
+<h2>Listen to Audio</h2>
+
+<a href="https://on.soundcloud.com/YR7Ciu087vOBz3GXWY"
+target="_blank">
+Listen on SoundCloud
+</a>
+</section>
+
+<hr>
+
+<section>
+<h2>YouTube Video</h2>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/i6zztv7R_DI"
+title="YouTube video player"
+frameborder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen>
+</iframe>
+</section>
+
+<hr>
+
+<section>
+<h2>Download Media</h2>
+
+<a href="sample.mp3" download>
+Download Audio File
+</a>
+</section>
+
+<hr>
+
+<section>
+<h2>Embedded Website</h2>
+
+<iframe src="https://www.wikipedia.org"
+width="700"
+height="400"
+title="Wikipedia Website">
+</iframe>
+</section>
+
+<hr>
+
+<footer>
+<p>URK24CS9056 - Web Technology Lab Batch1</p>
+</footer>
+
+</body>
+</html>
