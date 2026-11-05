@@ -1,0 +1,315 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ex 03: Responsive Webpage Layout</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Georgia, Garamond, serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #333333;
+}
+
+header {
+    background-color: #1e222b;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 40px auto;
+}
+
+main {
+    display: block;
+}
+
+.hero-banner {
+    width: 100%;
+    height: 300px;
+    background-color: lightblue;
+    background-image: url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    margin-bottom: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-title {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: bolder;
+    letter-spacing: 4px;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.6);
+    text-transform: uppercase;
+}
+
+.hero-banner h2 {
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 700;
+    background-color: rgba(0,0,0,0.5);
+    padding: 15px 25px;
+    border-radius: 8px;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+}
+
+.section-heading {
+    color: #2c3e50;
+    font-size: 24px;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ff9f0a;
+    padding-bottom: 8px;
+}
+
+.magazine-layout {
+    column-count: 3;
+    column-gap: 30px;
+    column-rule: 1px dashed #cccccc;
+    text-align: justify;
+    margin-bottom: 40px;
+}
+
+.magazine-layout p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.highlight-text {
+    display: inline;
+    background-color: #fff3cd;
+    font-weight: bold;
+    padding: 0 4px;
+}
+
+.nav-menu {
+    margin-top: 15px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-menu a:link {
+    color: #ffffff;
+    background-color: #34495e;
+}
+
+.nav-menu a:visited {
+    color: #e2e8f0;
+    background-color: #4a5568;
+}
+
+.nav-menu a:hover {
+    color: #111111;
+    background-color: #ff9f0a;
+    text-decoration: underline;
+}
+
+.nav-menu a:active {
+    color: #ffffff;
+    background-color: #f44336;
+}
+
+.features-box {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-top: 30px;
+}
+
+.custom-list {
+    list-style-type: circle;
+    padding-left: 30px;
+    margin-top: 15px;
+}
+
+.custom-list li {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #1e222b;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+@media (max-width: 900px) {
+    .magazine-layout {
+        column-count: 2;
+    }
+
+    .main-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .magazine-layout {
+        column-count: 1;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-banner {
+        height: 200px;
+    }
+
+    .hero-banner h2 {
+        font-size: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1 class="main-title">Modern Design Insights</h1>
+
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#articles">Articles</a></li>
+            <li><a href="#layouts">Layout Specs</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="container">
+
+    <div class="hero-banner" id="home">
+        <h2>Exploring HTML5 & CSS3 Properties</h2>
+    </div>
+
+    <main id="articles">
+
+        <h3 class="section-heading">
+            Featured Editorial (Multi-Column Layout)
+        </h3>
+
+        <div class="magazine-layout">
+
+            <p>
+                Cascading Style Sheets (CSS3) has revolutionized how
+                layout design operates on modern screens.
+                By utilizing advanced structural parameters like the
+                multicolumn layout grid mechanism, webpage
+                architects can easily wrap long-form data across
+                sequential vertical paths seamlessly.
+                This mimics high-end print publishing styles without
+                breaking data accessibility rules.
+            </p>
+
+            <p>
+                Managing element spatial dynamics is critical. Margins
+                define empty whitespace structural areas outside
+                borders, while paddings preserve internal breathing
+                boundaries inside components.
+                <span class="highlight-text">Understanding the box model</span>
+                ensures fluid elements scale proportionally across devices,
+                guaranteeing that elements remain well-organized regardless
+                of viewing scale.
+            </p>
+
+            <p>
+                Typography holds equal priority alongside positional
+                layouts. CSS3 properties like letter-spacing,
+                font-weight modifiers, font-style variants, and
+                ambient text-shadow fields elevate unpolished copy
+                into visually striking digital designs.
+                Using web-safe fallbacks keeps layouts robust across platforms.
+            </p>
+
+        </div>
+    </main>
+
+    <section class="features-box" id="layouts">
+
+        <h4 class="section-heading">
+            Core Layout Specifications Explored
+        </h4>
+
+        <p>
+            During this assignment iteration, the structural elements
+            are tested against standard presentation benchmarks:
+        </p>
+
+        <ul class="custom-list">
+
+            <li>
+                <strong>Normal Flow:</strong>
+                The base operational standard tracking block elements
+                sequentially downward.
+            </li>
+
+            <li>
+                <strong>CSS3 Multicolumn Rules:</strong>
+                Splitting clean text tracks automatically using
+                structural column configurations.
+            </li>
+
+            <li>
+                <strong>State Engine Links:</strong>
+                Monitoring element responsiveness through customized
+                unvisited, visited, hover, and active states.
+            </li>
+
+            <li>
+                <strong>Display Switches:</strong>
+                Alternating formatting logic between inline text
+                containers and structural block spaces gracefully.
+            </li>
+
+        </ul>
+    </section>
+
+</div>
+
+<footer id="contact">
+    <p>
+        &copy; 2026 Department of Web Engineering.
+        All Rights Reserved. Ex.No:03 - Portfolio.
+    </p>
+</footer>
+
+</body>
+</html>
