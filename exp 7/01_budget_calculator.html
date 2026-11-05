@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Budget Calculator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: lightblue;
+            text-align: center;
+        }
+        .box {
+            background-color: white;
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input {
+            width: 150px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        button {
+
+            background-color: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                let amount = parseFloat($("#amount").val());
+                let rent = parseFloat($("#rent").val());
+                let accessories = parseFloat($("#accessories").val());
+                let emergency = parseFloat($("#emergency").val());
+                let saving = parseFloat($("#saving").val());
+                let total = rent + accessories + emergency + saving;
+                if (isNaN(amount) || amount <= 0 ||
+                    isNaN(rent) || isNaN(accessories) ||
+                    isNaN(emergency) || isNaN(saving) ||
+                    rent < 0 || accessories < 0 ||
+                    emergency < 0 || saving < 0) {
+                    alert("Enter valid amount and percentages");
+                }
+                else if (total != 100) {
+                    alert("Percentage values must add up to 100%");
+                }
+                else {
+                    $("#r1").val((amount * rent / 100).toFixed(2));
+                    $("#r2").val((amount * accessories / 100).toFixed(2));
+                    $("#r3").val((amount * emergency / 100).toFixed(2));
+                    $("#r4").val((amount * saving / 100).toFixed(2));
+                }
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="box">
+        <h2>Budget Calculator</h2>
+        Total Amount:
+        <input type="number" id="amount" placeholder="Enter amount">
+        <br><br>
+        Room Rent (%):
+        <input type="number" id="rent" value="40">
+        <br>
+        Accessories (%):
+        <input type="number" id="accessories" value="20">
+        <br>
+        Emergency (%):
+        <input type="number" id="emergency" value="10">
+        <br>
+        Saving (%):
+        <input type="number" id="saving" value="30">
+        <br><br>
+        <button id="btn">Evaluate My Money</button>
+        <h3>Budget Result</h3>
+        Room Rent:
+        <input type="text" id="r1" readonly>
+        <br>
+        Accessories:
+        <input type="text" id="r2" readonly>
+        <br>
+        Emergency:
+        <input type="text" id="r3" readonly>
+
+        <br>
+        Saving:
+        <input type="text" id="r4" readonly>
+    </div>
+</body>
+</html>

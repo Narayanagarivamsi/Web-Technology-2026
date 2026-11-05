@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cake Order</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        body {
+            font-family: Arial;
+
+            background-color: pink;
+            text-align: center;
+        }
+        .box {
+            background-color: white;
+            width: 350px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        input, select {
+            padding: 7px;
+            margin: 8px;
+        }
+        button {
+            background-color: purple;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                let price = parseInt($("#cake").val());
+                let quantity = parseInt($("#quantity").val());
+                let topping = parseInt($("#topping").val());
+                if (isNaN(quantity) || quantity <= 0) {
+                    alert("Enter a valid quantity");
+                }
+
+                else {
+                    let total = (price + topping) * quantity;
+                    $("#result").val(total);
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Cake Order</h2>
+        <label>Select Cake:</label><br>
+        <select id="cake">
+            <option value="500">Chocolate Cake - Rs.500</option>
+            <option value="400">Vanilla Cake - Rs.400</option>
+            <option value="600">Black Forest Cake - Rs.600</option>
+        </select>
+        <br>
+        <label>Quantity:</label><br>
+        <input type="number" id="quantity" value="1" min="1">
+        <br>
+        <label>Extra Topping:</label><br>
+        <select id="topping">
+            <option value="0">No Topping - Rs.0</option>
+            <option value="50">Chocolate - Rs.50</option>
+            <option value="100">Fruits - Rs.100</option>
+        </select>
+        <br><br>
+        <button id="btn">Calculate Price</button>
+        <h3>Total Price (Rs.)</h3>
+        <input type="text" id="result" readonly>
+
+    </div>
+</body>
+</html>

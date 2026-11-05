@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Body Workshop</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background-color: lightblue;
+        }
+        .box {
+            background-color: white;
+
+            width: 500px;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .car {
+            margin: 40px auto;
+            position: relative;
+            width: 300px;
+            height: 100px;
+        }
+        .body {
+            background-color: red;
+            width: 280px;
+            height: 55px;
+            position: absolute;
+            bottom: 15px;
+            left: 10px;
+            border-radius: 30px 50px 10px 10px;
+        }
+        .glass {
+            background-color: lightblue;
+            width: 100px;
+            height: 35px;
+            position: absolute;
+            top: 5px;
+            left: 100px;
+            border: 2px solid black;
+            border-radius: 20px 30px 0 0;
+        }
+        .tyre {
+            background-color: black;
+
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: 0;
+        }
+        #wheel1 {
+            left: 50px;
+        }
+        #wheel2 {
+            right: 50px;
+        }
+        select {
+            padding: 8px;
+            margin: 10px;
+        }
+    </style>
+    <script>
+        $(document).ready(function() {
+            $("#color").change(function() {
+                $(".body").css("background-color", $(this).val());
+            });
+
+            $("#tint").change(function() {
+                $(".glass").css("background-color", $(this).val());
+            });
+            $("#size").change(function() {
+                $(".tyre").css({
+                    "width": $(this).val() + "px",
+                    "height": $(this).val() + "px"
+                });
+            })
+
+        });
+    </script>
+</head>
+<body>
+    <div class="box">
+        <h2>Car Body Workshop</h2>
+        <div class="car">
+            <div class="body"></div>
+            <div class="glass"></div>
+            <div class="tyre" id="wheel1"></div>
+            <div class="tyre" id="wheel2"></div>
+        </div>
+        <label>Car Color:</label>
+        <select id="color">
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="black">Black</option>
+        </select>
+        <br>
+        <label>Glass Tint:</label>
+        <select id="tint">
+            <option value="lightblue">Light Blue</option>
+            <option value="gray">Gray</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+        </select>
+        <br>
+        <label>Tyre Size:</label>
+        <select id="size">
+            <option value="30">Small</option>
+
+            <option value="40" selected>Medium</option>
+            <option value="55">Large</option>
+        </select>
+    </div>
+</body>
+</html>
